@@ -1,0 +1,7 @@
+Flask
+torchvision
+torchaudio
+psycopg2-binary
+pandas
+joblib
+scikit-learn

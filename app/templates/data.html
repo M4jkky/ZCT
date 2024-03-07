@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Diabetes Detection Database</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;600&display=swap" rel="stylesheet">
+        <link href="../static/data_style.css" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <header class="upper_case">
+            <a href="/"><img src="../static/back.png" alt="Back" class="back-button"></a>
+            <span>data</span>
+        </header>
+
+        <article>
+            <section class="main">
+                <table class="tabulka">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Age</th>
+                            <th>Hypertension</th>
+                            <th>Heart Disease</th>
+                            <th>BMI</th>
+                            <th>HbA1c</th>
+                            <th>Glucose Level</th>
+                            <th>Predict</th>
+                            <th>Submitted</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for row in data %}
+                        <tr>
+                            <td>{{ row[0] }}</td>
+                            <td>{{ row[1] }}</td>
+                            <td>{{ row[2] }}</td>
+                            <td>{{ row[3] }}</td>
+                            <td>{{ row[4] }}</td>
+                            <td>{{ row[5] }}</td>
+                            <td>{{ row[6] }}</td>
+                            <td>{{ row[7] }}</td>
+                            <td>{{ row[8] }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+
+                <div class="buttonik">
+                    <a href="/form" class="button">Predict</a>
+                </div>
+            </section>
+        </article>
+    </body>
+</html>

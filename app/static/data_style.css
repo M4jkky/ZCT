@@ -1,0 +1,128 @@
+.upper_case {
+    text-transform: uppercase;
+}
+
+body {
+    margin: 0;
+    font-family: 'Nunito', sans-serif;
+}
+
+header {
+    background-color: #1ED8B6;
+    color: black;
+    padding: 27px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 5px;
+    line-height: 10px;
+    margin-bottom: 2px;
+    border-bottom: 2px solid black;
+    font-size: 40px;
+}
+
+span {
+    margin: 0 auto 0 44%;
+}
+
+.back-button {
+    width: 18px;
+    height: 18px;
+}
+
+article {
+    max-width: 850px;
+    margin: auto;
+    justify-content: center;
+}
+
+label {
+    font-size: 20px;
+}
+
+#title-section {
+    margin-bottom: 10px;
+    margin-top: 10px;
+    font-size: 26px;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+    letter-spacing: 5px;
+    text-align: center;
+    font-size: 36px;
+    line-height: 58px;
+}
+
+img {
+    padding-top: 2px;
+}
+
+.label-container {
+    display: flex;
+    align-items: center;
+}
+
+.tabulka {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    width: 100%;
+}
+
+.tabulka thead tr {
+    background-color: #2497ed;
+    color: #ffffff;
+    text-align: left;
+}
+
+.tabulka th,
+.tabulka td {
+    padding: 12px 15px;
+}
+
+.tabulka tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.tabulka tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.tabulka tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+}
+
+.buttonik {
+    text-decoration: none;
+    margin: 10px;
+    width: 70px;
+    background-color: #EFD9CE;
+    border-radius: 10px;
+    border: 2px solid #886F68;
+    cursor: pointer;
+    font-size: 20px;
+    text-align: center;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+    justify-content: center;
+}
+
+.buttonik a {
+    color: black !important;
+    text-decoration: none !important;
+}
+
+.buttonik:hover {
+    background-color: #a68278;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: auto;
+}

@@ -1,0 +1,53 @@
+version: '3'
+
+services:
+  db:
+    container_name: db
+    image: postgres:10.4-alpine
+    environment:
+      POSTGRES_DB: db
+      POSTGRES_USER: db
+      POSTGRES_PASSWORD: db
+    ports:
+      - "5432:5432"
+    networks:
+      - pgnet
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+
+  admin:
+    image: dpage/pgadmin4
+    environment:
+      PGADMIN_DEFAULT_EMAIL: db@db.sk
+      PGADMIN_DEFAULT_PASSWORD: db
+    ports:
+      - "8080:80"
+    networks:
+        - pgnet
+    depends_on:
+      - db
+    volumes:
+      - pgadmin_data:/var/lib/pgadmin
+
+  flask_app:
+    container_name: flask_app
+    restart: always
+    build: ./app
+    networks:
+      - pgnet
+    ports:
+      - "4000:4000"
+    volumes:
+      - ./app:/app
+    depends_on:
+      - db
+      - admin
+
+networks:
+  pgnet:
+    driver: bridge
+
+volumes:
+    pgdata: {}
+    pgadmin_data: {}
