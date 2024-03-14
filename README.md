@@ -1,5 +1,6 @@
 # Web aplikácia pre detekciu cukrovky
-v docker-compose.yml sú definované 3 služby:
+Táto aplikácia slúži na nie úplne presnú detekciu cukrovky, F1 okolo 80%, ale snáď poslúži ako zadanie.
+V docker-compose.yml sú definované 3 služby:
 - flask_app - web aplikácia pomocou flasku na detekciu cukrovky a zápisu do databázy
 - db - PostgreSQL databáza použivateľov
 - admin - webové rozhranie pgAdmin pre správu databázy
@@ -26,7 +27,7 @@ http://localhost:8080
 `SELECT * FROM user_data;`
 
 ## Vypnutie
- tento skript zastaví všetky kontajnery end-app.sh
+ tento skript zastaví všetky kontajnery: end-app.sh
  
 ## Odstránenie
  pomocou skriptu remove-app.sh sa odstránia všetky kontajnery, images a volumes.

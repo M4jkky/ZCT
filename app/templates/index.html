@@ -1,77 +1,78 @@
 <!-- templates/index.html -->
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Diabetes Detection</title>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;600&display=swap" rel="stylesheet">
-        <link href="../static/style.css" rel="stylesheet">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diabetes Detection</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;600&display=swap" rel="stylesheet">
+    <link href="../static/style.css" rel="stylesheet">
+</head>
 
-    <body>
+<body>
 
-        <header class="upper_case">
-            <span>Docker</span>
-        </header>
+<header class="upper_case">
+    <span>Docker</span>
+</header>
 
-        <article>
+<article>
 
-            <section id="title-section">
-                <div class="author">by Marián Hriň</div>
-                <h1>Diabetes Detection</h1>
-                <div class="github upper_case">
-                    <span>social</span>
-                    <a href="https://github.com/M4jkky" target="_blank"><img src="../static/github.png" alt="github"></a>
-                </div>
-            </section>
+    <section id="title-section">
+        <div class="author">by Marián Hriň</div>
+        <h1>Diabetes Detection</h1>
+        <div class="github upper_case">
+            <span>social</span>
+            <a href="https://github.com/M4jkky" target="_blank"><img src="../static/github.png" alt="github"></a>
+        </div>
+    </section>
 
-            <section class="main">
+    <section class="main">
 
-                <p>
-                    This web app uses a neural network using PyTorch to predict whether a patient has diabetes or not. Accuracy of the model is around 87-90%.
-                    The model was trained on a dataset containing 100 000 patients. The dataset was obtained from kaggle and
-                    can be found down below.
-                </p>
-                <h4 class="upper_case">
-                    For prediction, these features are used:
-                </h4>
+        <p>
+            This web app uses a neural network using PyTorch to predict whether a patient has diabetes or not. Accuracy
+            of the model is around 87-90%.
+            The model was trained on a dataset containing 100 000 patients. The dataset was obtained from kaggle and
+            can be found down below.
+        </p>
+        <h4 class="upper_case">
+            For prediction, these features are used:
+        </h4>
 
-                <div class="list">
-                    <ul>
-                        <li>age</li>
-                        <li>hypertension</li>
-                        <li>heart_disease</li>
-                        <li>bmi</li>
-                        <li>HbA1c_level</li>
-                        <li>blood_glucose_level</li>
-                    </ul>
-                </div>
-
-            </section>
-
-            <section class="main">
-                <div class="buttons">
-                    <div class="buttonik">
-                        <a href="/form" class="button">Predict</a>
-                    </div>
-                    <div class="buttonik">
-                        <a href="/data" class="button">Data</a>
-                    </div>
-                </div>
-            </section>
-
-        </article>
-
-        <footer>
-            <div class="links upper_case">links</div>
+        <div class="list">
             <ul>
-                <li><a href="https://github.com/IKS-TUKE-studenti-2023-2024">GitHub</a></li>
-                <li><a href="https://www.kaggle.com/datasets/iammustafatz/diabetes-prediction-dataset">Dataset</a></li>
+                <li>age</li>
+                <li>hypertension</li>
+                <li>heart_disease</li>
+                <li>bmi</li>
+                <li>HbA1c_level</li>
+                <li>blood_glucose_level</li>
             </ul>
+        </div>
 
-        </footer>
-    </body>
+    </section>
+
+    <section class="main">
+        <div class="buttons">
+            <div class="buttonik">
+                <a href="/form" class="button">Predict</a>
+            </div>
+            <div class="buttonik">
+                <a href="/data" class="button">Data</a>
+            </div>
+        </div>
+    </section>
+
+</article>
+
+<footer>
+    <div class="links upper_case">links</div>
+    <ul>
+        <li><a href="https://github.com/IKS-TUKE-studenti-2023-2024">GitHub</a></li>
+        <li><a href="https://www.kaggle.com/datasets/iammustafatz/diabetes-prediction-dataset">Dataset</a></li>
+    </ul>
+
+</footer>
+</body>
 </html>

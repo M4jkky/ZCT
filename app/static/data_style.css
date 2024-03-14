@@ -12,21 +12,14 @@ header {
     color: black;
     padding: 27px;
     display: flex;
-    align-items: center;
     letter-spacing: 5px;
     line-height: 10px;
     margin-bottom: 2px;
     border-bottom: 2px solid black;
     font-size: 40px;
-}
-
-span {
-    margin: 0 auto 0 44%;
-}
-
-.back-button {
-    width: 18px;
-    height: 18px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
 }
 
 article {

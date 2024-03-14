@@ -34,6 +34,12 @@ services:
     container_name: flask_app
     restart: always
     build: ./app
+    environment:
+      DB_NAME: db
+      DB_USER: db
+      DB_PASSWORD: db
+      DB_HOST: db
+      DB_PORT: 5432
     networks:
       - pgnet
     ports:

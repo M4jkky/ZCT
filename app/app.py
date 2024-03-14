@@ -1,21 +1,26 @@
-import psycopg2
-import torch.nn.functional as F
-import torch.nn as nn
-import pandas as pd
+import os
 import joblib
+import psycopg2
+import pandas as pd
+
 import torch
+import torch.nn as nn
+import torch.nn.functional as F
 
 from flask import Flask, request, render_template
 
 app = Flask(__name__)
 
+db_parameters = {
+    'database': os.environ.get('DB_NAME'),
+    'user': os.environ.get('DB_USER'),
+    'password': os.environ.get('DB_PASSWORD'),
+    'host': os.environ.get('DB_HOST'),
+    'port': os.environ.get('DB_PORT')
+}
+
 # Pripojenie k databáze
-conn = psycopg2.connect(
-    database='db',
-    user='db',
-    password='db',
-    host='db',
-    port='5432')
+conn = psycopg2.connect(**db_parameters)
 
 
 # Vytvorenie modelu na klasifikáciu
